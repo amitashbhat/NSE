@@ -54,7 +54,6 @@ public class NseStockPageTest extends BaseTest {
             NseHomePage nseHomePage = new NseHomePage(driver);
             NseStockPage stockPage = new NseStockPage(driver);
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             nseHomePage.openHomePage();
             String beforeScreenshot = ScreenshotUtil.captureScreenshot(driver, "before_" + stockName);
             ExtentManager.getTest().info("<b>Opened NSE homepage</b><br><img src='" + beforeScreenshot + "' height='200' width='300'/>");
